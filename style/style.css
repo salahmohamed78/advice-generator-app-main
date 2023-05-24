@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  --primaryLightCyan: hsl(193, 38%, 86%);
+  --primaryNeonGreen: hsl(150, 100%, 66%);
+  --neutralGrayishBlue: hsl(217, 19%, 38%);
+  --neutralDarkGrayishBlue: hsl(217, 19%, 24%);
+  --neutralDarkBlue: hsl(218, 23%, 16%);
+  --marginBottom: 30px;
+}
+
+body {
+  background-color: var(--neutralDarkBlue);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  align-content: center;
+  justify-content: center;
+  height: 99vh;
+  padding-inline: 20px;
+}
+
+.advice-wrapper {
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: grid;
+  justify-items: center;
+
+  background-color: var(--neutralDarkGrayishBlue);
+  padding-top: 50px;
+  border-radius: 15px;
+  padding-inline: 20px;
+}
+
+.title {
+  color: var(--primaryNeonGreen);
+  margin-block-end: var(--marginBottom);
+}
+
+.advice {
+  color: var(--primaryLightCyan);
+  font-size: 28px;
+  max-width: 30ch;
+  text-align: justify;
+  margin-block-end: var(--marginBottom);
+  padding-inline: 30px;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--primaryNeonGreen);
+  transform: translateY(50%);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 20px var(--primaryNeonGreen),
+    -1px -1px 20px var(--primaryNeonGreen);
+}
+
+footer {
+  align-self: end;
+  grid-row-start: 3;
+  color: var(--primaryLightCyan);
+}
+
+.seperator--desktop {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .seperator--desktop {
+    display: block;
+  }
+  .seperator--mobile {
+    display: none;
+  }
+}
